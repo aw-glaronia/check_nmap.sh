@@ -18,7 +18,7 @@ if  [ -z "$HOST" ]
 fi
 
 #Store NMAP-Output as Variable
-NMAP=$(nmap -sP $HOST)
+NMAP=$(nmap -nP -sP $HOST)
 
 #Get Status
 STATUS=$(echo "$NMAP" | grep "Host is")
